@@ -77,8 +77,7 @@ public class Registro extends AppCompatActivity {
                                 finish();
                                 startActivity(new Intent(Registro.this, MainActivity.class));
                                 Toast.makeText(Registro.this, "usuario guardado", Toast.LENGTH_SHORT).show();
-                            }
-                        }).addOnFailureListener(new OnFailureListener() {
+                            }                        }).addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
                                 Toast.makeText(Registro.this, "error al guardar", Toast.LENGTH_SHORT).show();

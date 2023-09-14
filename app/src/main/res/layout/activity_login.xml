@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:padding="25dp"
+    android:orientation="vertical">
+
+  <ImageView
+      android:id="@+id/loginImageView"
+      android:layout_width="100dp"
+      android:layout_height="100dp"
+      android:src="@drawable/logo_de_aplicac_2"
+      android:layout_gravity="center"/>
+  <TextView
+      android:id="@+id/bienvenidolabel"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Bienvenido a HABIT-TRACKER"
+      android:layout_margin="28dp"
+      android:textSize="22sp"
+      android:textStyle="bold"
+      android:layout_gravity="center"
+      android:transitionName="textTrans"/>
+
+  <TextView
+      android:id="@+id/continuarlabel"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Inicia sesión para continuar"
+      android:textSize="18sp"
+      android:layout_gravity="center"
+      android:transitionName="iniciaSesionTextTrans"/>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="14dp"
+      android:layout_marginBottom="14dp"
+      android:orientation="vertical">
+      <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="14dp"
+          android:id="@+id/usuarioTextField"
+          android:hint="Email"
+          style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+          <com.google.android.material.textfield.TextInputEditText
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"/>
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="14dp"
+          android:id="@+id/contrasenaTextField"
+          android:hint="Contraseña"
+          app:passwordToggleEnabled="true"
+
+          style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/inicioSesion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="INICIO SESIÓN"
+            android:layout_marginTop="12dp"/>
+      </com.google.android.material.textfield.TextInputLayout>
+      <TextView
+
+          android:id="@+id/nuevoUsuario"
+
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textAlignment="center"
+          android:textSize="17dp"
+          android:textColor="@android:color/primary_text_light"
+          android:fontFamily="@font/hammersmith_one"
+          android:layout_gravity="right"
+          android:clickable="true"
+          android:focusable="true"
+          android:text="Registrate para Inicia sesión"
+          android:transitionName="newUserTrans"/>
+
+  </LinearLayout>
+</LinearLayout>
